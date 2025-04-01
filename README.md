@@ -9,16 +9,18 @@ The development is based on the **Ultra-Low-Power Ultrasonic Wind Meter (ULP Sta
 - **float32 wind_spd**: Wind speed value.
 - **int32 wind_dir**: Wind direction value.
 
+The USB port, baud rate, and logging to a file (enable or disable) can be configured via a configuration file.
+
 ### Features:
 - Interface with Calypso anemometers via UART.
-- Publish real-time wind speed and direction data on ROS2 message.
-- Save time, windspeed and direction to csv file
+- Publish real-time wind speed and direction data in a ROS2 message.
+- Save time, wind speed, and direction to a CSV file.
 
 ## Requirements
 
-- ROS2 (Humble, Foxy, Galactic or later).
+- ROS2 (Humble, Foxy, Galactic, or later).
 - Calypso anemometer with UART communication capability.
-- Ubuntu 
+- Ubuntu (or compatible Linux distribution).
 
 ## Building
 
@@ -31,7 +33,6 @@ The development is based on the **Ultra-Low-Power Ultrasonic Wind Meter (ULP Sta
   colcon build
 4. run it
    ros2 launch calypso_ros_driver calypso_ros_driver_launch.py
-## Config file
 
    
    

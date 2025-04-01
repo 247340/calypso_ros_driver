@@ -31,16 +31,15 @@ class calypso_ros(Node):
     def process_data(self, data):
         wind_dir, wind_spd = decode_data(data)
         if wind_spd != None and wind_dir != None:
-            if self.logging_param:
-                timestamp = self.get_clock().now().nanoseconds // 1000
-                self.logger.write_data_to_file(timestamp, wind_dir, wind_spd)
-            
             msg = WindSpeed()
             msg.header.stamp = self.get_clock().now().to_msg()
             msg.wind_spd = wind_spd
             msg.wind_dir = wind_dir
             self.publisher.publish(msg)
-
+            if self.logging_param:
+                timestamp = self.get_clock().now().nanoseconds // 1000
+                self.logger.write_data_to_file(timestamp, wind_dir, wind_spd)
+            
     def __del__(self):
         self.uart.close()
 

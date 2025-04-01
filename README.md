@@ -1,6 +1,6 @@
 # CALYPSO - ROS2 Driver
 **CALYPSO - ROS2 Driver** is a ROS2 driver for ultrasonic anemometers, which communicate via UART technology. 
-Once the project is launched, the ROS2 node starts receiving data and publishes a `WindSpeed` message on the **/wind_speed_data** topic. This message contains the following fields:
+Once the project is launched, the ROS2 node starts receiving data and publishes a `WindSpeed` message on the **wind_speed_data** topic. This message contains the following fields:
 - **std_msgs/Header header**
 - **float32 wind_spd** - wind speed value.
 - **int32 wind_dir** - wind direction value.

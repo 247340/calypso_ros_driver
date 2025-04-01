@@ -12,11 +12,11 @@ class calypso_ros(Node):
         super().__init__('calypso_ros')
         self.declare_parameter('logging', False)
         self.declare_parameter('usb_port', '/dev/ttyUSB0')
-        self.declare_parameter('baudrate', 115200)
+        self.declare_parameter('baud_rate', 115200)
         
         self.logging_param = self.get_parameter('logging').get_parameter_value().bool_value
         self.usb_port = self.get_parameter('usb_port').get_parameter_value().string_value
-        self.baudrate = self.get_parameter('baudrate').get_parameter_value().integer_value
+        self.baudrate = self.get_parameter('baud_rate').get_parameter_value().integer_value
         self.publisher = self.create_publisher(WindSpeed, 'wind_speed_data', 10)
         
         self.uart = UART_communication(port=self.usb_port, baudrate=self.baudrate, timeout=1)

@@ -20,13 +20,14 @@ class calypso_ros(Node):
         self.publisher = self.create_publisher(WindSpeed, 'wind_speed_data', 10)
         
         self.uart = UART_communication(port=self.usb_port, baudrate=self.baudrate, timeout=1)
+        self.uart.set_callback(self.process_data)
+        self.uart.connect()
         
         if self.logging_param:
             logger_name = time.strftime("%Y%m%d_%H%M%S", time.localtime())
             self.logger = Data_logger(filename=f"calypso_log_{logger_name}.csv", flush_interval=2)
         
-        self.uart.set_callback(self.process_data)
-        self.uart.connect()
+
 
     def process_data(self, data):
         wind_dir, wind_spd = decode_data(data)

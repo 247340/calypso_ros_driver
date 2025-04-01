@@ -33,8 +33,10 @@ The following parameters can be configured via a configuration file:
 - **logging**: Boolean parameter to enable or disable logging to a CSV file located in the log folder inside the calypso_ros_driver directory.
 ## Run it
 1. Clone the repository into your ROS2 workspace:
+   - mkdir src
+   - cd src      
    - git clone https://github.com/247340/calypso_ros_driver.git
-2. Install dependencies
+3. Install dependencies
    - cd ..
    - rosdep install --from-paths src --ignore-src -r -y
 4. build it

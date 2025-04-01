@@ -11,17 +11,27 @@ The development is based on the **Ultra-Low-Power Ultrasonic Wind Meter (ULP Sta
 
 ### Features:
 - Interface with Calypso anemometers via UART.
-- Real-time wind speed and direction data.
-- Integration with ROS2 ecosystem, utilizing `std_msgs/Header` for message structure.
+- Publish real-time wind speed and direction data on ROS2 message.
+- Save time, windspeed and direction to csv file
 
 ## Requirements
 
-- ROS2 (Foxy, Galactic or later).
+- ROS2 (Humble, Foxy, Galactic or later).
 - Calypso anemometer with UART communication capability.
-- A system capable of connecting to the anemometer via UART (e.g., Raspberry Pi, PC with a UART interface).
+- Ubuntu 
 
-## Installation
+## Building
 
 1. Clone the repository into your ROS2 workspace:
-   ```bash
    git clone https://github.com/247340/calypso_ros_driver.git
+2. Install dependencies
+   cd..
+   rosdep install --from-paths src --ignore-src -r -y
+3. build it
+  colcon build
+4. run it
+   ros2 launch calypso_ros_driver calypso_ros_driver_launch.py
+## Config file
+
+   
+   

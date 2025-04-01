@@ -17,13 +17,14 @@ The USB port, baud rate, and logging to a file (enable or disable) can be config
 ## Supported Anemometers
 This driver was tested on the following anemometer models:
 - **CALYPSO Ultra-Low-Power Ultrasonic Wind Meter (ULP Standard)**
+- 
 If you are using a different model of ultrasonic anemometer, additional modifications may be required to support it.
 ## Nodes
 - **calypso_ros**: 
   - Responsible for interfacing with the anemometer, receiving data, and publishing it to the ROS2 system.
 ## Topics
 - **wind_speed_data**:
-  - Type: "calypso_ros_driver_msgs/msg/WindSpeed"
+  - Type: `calypso_ros_driver_msgs/msg/WindSpeed`
   - Publishes wind speed and direction data from the Calypso anemometer.
 ## Parameters
 The following parameters can be configured via a configuration file:

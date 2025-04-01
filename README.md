@@ -32,8 +32,8 @@ If you are using a different model of ultrasonic anemometer, additional modifica
   - Responsible for interfacing with the Calypso anemometer, receiving data, and publishing it to the ROS2 system.
 
 ## Topics
-- **/wind_speed_data**:
-  - Type: 'calypso_ros_driver_msgs/msg/WindSpeed"
+- **wind_speed_data**:
+  - Type: "calypso_ros_driver_msgs/msg/WindSpeed"
   - Description: wind speed and direction data received from the anemometer.
 
 ## Parameters

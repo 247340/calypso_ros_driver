@@ -8,8 +8,8 @@ def generate_launch_description():
     package_name = 'calypso_ros_driver'
     config_file = os.path.join(
         get_package_share_directory(package_name), 
-        'config',  # Předpokládá se, že je ve složce 'config'
-        'parameters.yaml'  # Název YAML souboru s parametry
+        'config', 
+        'parameters.yaml'  
     )
 
     return LaunchDescription([

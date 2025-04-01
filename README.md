@@ -4,6 +4,7 @@ Once the project is launched, the ROS2 node starts receiving data and publishes 
 - **std_msgs/Header header**
 - **float32 wind_spd** - wind speed value.
 - **int32 wind_dir** - wind direction value.
+  
 The USB port, baud rate, and logging to a file (enable or disable) can be configured via a configuration file.
 ## Features:
 - Interface with Calypso anemometers via UART.

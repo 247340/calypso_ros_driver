@@ -1,0 +1,5 @@
+calypso_ros:
+  ros__parameters:
+    logging: true
+    usb_port: "/dev/ttyUSB0"
+    baudrate: 115200

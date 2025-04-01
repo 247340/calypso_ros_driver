@@ -25,14 +25,14 @@ The USB port, baud rate, and logging to a file (enable or disable) can be config
 ## Building
 
 1. Clone the repository into your ROS2 workspace:
-   git clone https://github.com/247340/calypso_ros_driver.git
+   - git clone https://github.com/247340/calypso_ros_driver.git
 2. Install dependencies
-   cd..
-   rosdep install --from-paths src --ignore-src -r -y
-3. build it
-  colcon build
-4. run it
-   ros2 launch calypso_ros_driver calypso_ros_driver_launch.py
+   - cd..
+   - rosdep install --from-paths src --ignore-src -r -y
+4. build it
+   - colcon build
+5. run it
+   - ros2 launch calypso_ros_driver calypso_ros_driver_launch.py
 
    
    

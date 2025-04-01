@@ -1,13 +1,11 @@
 # CALYPSO - ROS2 Driver
 
-## About the Project
+**CALYPSO - ROS2 Driver** is a ROS2 driver for ultrasonic anemometers manufactured by Calypso, which communicate via UART technology. 
 
-**CALYPSO - ROS2 Driver** is a ROS2 driver for anemometers manufactured by Calypso, which communicate via UART technology. 
-
-The development is based on the **Ultra-Low-Power Ultrasonic Wind Meter (ULP Standard)** model. Once the project is launched, the ROS2 node starts receiving data and publishes it into a `WindSpeed` message on the **/wind_speed_data** topic. This message contains the following fields:
+Once the project is launched, the ROS2 node starts receiving data and publish `WindSpeed` message on the **/wind_speed_data** topic. This message contains the following fields:
 - **std_msgs/Header header**
-- **float32 wind_spd**: Wind speed value.
-- **int32 wind_dir**: Wind direction value.
+- **float32 wind_spd** - wind speed value.
+- **int32 wind_dir** - wind direction value.
 
 The USB port, baud rate, and logging to a file (enable or disable) can be configured via a configuration file.
 
@@ -24,30 +22,26 @@ The USB port, baud rate, and logging to a file (enable or disable) can be config
 - 
 ## Supported Anemometers
 
-This driver was tested on the following Calypso anemometer models:
+This driver was tested on the following anemometer models:
 - **CALYPSO Ultra-Low-Power Ultrasonic Wind Meter (ULP Standard)**
 
-If you are using a different model of Calypso anemometer, additional modifications may be required to support it.
+If you are using a different model of ultrasonic anemometer, additional modifications may be required to support it.
 
 ## Nodes
-
-This package provides the following ROS2 node:
 - **calypso_ros**: 
   - Responsible for interfacing with the Calypso anemometer, receiving data, and publishing it to the ROS2 system.
 
 ## Topics
-
-This package publishes data to the following topic:
 - **/wind_speed_data**:
   - Type: 'calypso_ros_driver_msgs/msg/WindSpeed"
-  - Description: Publish wind speed and direction data received from the anemometer.
+  - Description: wind speed and direction data received from the anemometer.
 
 ## Parameters
 
 The following parameters can be configured via a configuration file:
 - **usb_port**: USB port to which the anemometer is connected (e.g., `/dev/ttyUSB0`).
 - **baud_rate**: Baud rate for UART communication (e.g., `9600`).
-- **enable_logging**: Boolean parameter to enable or disable logging to a CSV file.
+- **logging**: Boolean parameter to enable or disable logging to a CSV file located in the log folder inside the calypso_ros_driver directory.
 
 ## Run it
 1. Clone the repository into your ROS2 workspace:

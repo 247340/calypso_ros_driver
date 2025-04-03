@@ -14,7 +14,7 @@ class Data_logger:
         self.buffer = [] # buffer for storing data
         self.last_flush_time = time.time()  # last flush time
         with open(self.filename, 'w') as file:
-                    file.write("TIMESTAMP,TIME,DIRECTION,SPEED\n")
+                    file.write("DATETIME,TIMESTAMP,DIRECTION,SPEED\n")
 #Adds data to the buffer and writes to the file if flush interval has passed.
     def write_data_to_file(self, timestamp, direction, speed):
         timestamp_sec = timestamp / 1_000_000

@@ -14,7 +14,7 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
         (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
     ],
-    install_requires=['setuptools', 'rclpy'],
+    install_requires=['setuptools','rclpy','pyserial'],
     zip_safe=True,
     maintainer='247340',
     maintainer_email='mblaha29@seznam.cz',

@@ -34,8 +34,7 @@ The following parameters can be configured via a configuration file:
 ## Run it
 1. Clone the repository into your ROS2 workspace:  
    - git clone https://github.com/247340/calypso_ros_driver.git
-3. Install dependencies
-   - cd ..
+3. Install dependencies from your root directory
    - rosdep install --from-paths src --ignore-src -r -y
 4. build it
    - colcon build

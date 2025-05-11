@@ -12,8 +12,7 @@ class Data_logger:
             self.log_folder = log_directory
         if not os.path.exists(self.log_folder):
             os.makedirs(self.log_folder)
-            if logger:
-                logger.info(f"Log directory created: {self.log_folder}")
+
 
         self.filename = os.path.join(self.log_folder, filename)
         self.flush_interval = flush_interval

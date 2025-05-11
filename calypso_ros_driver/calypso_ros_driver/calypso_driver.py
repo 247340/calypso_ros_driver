@@ -28,7 +28,7 @@ class calypso_ros(Node):
         else:
             if log_dir_param:
                 self.get_logger().warn(f"Invalid log directory path: '{log_dir_param}', using default path.")
-            self.log_directory = ''  # použije se výchozí cesta v Data_logger
+            self.log_directory = ''
 
         self.publisher = self.create_publisher(WindSpeed, 'wind_speed_data', 10)
 

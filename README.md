@@ -30,7 +30,8 @@ If you are using a different model of ultrasonic anemometer, additional modifica
 The following parameters can be configured via a configuration file:
 - **usb_port**: USB port to which the anemometer is connected (e.g., /dev/ttyUSB0).
 - **baud_rate**: Baud rate for UART communication (e.g., 9600).
-- **logging**: Boolean parameter to enable or disable logging to a CSV file located in the log folder inside the calypso_ros_driver directory.
+- **logging**: Boolean parameter to enable or disable logging to a CSV file.
+- **log_directory**: Define the log directory.
 ## Run it
 1. Clone the repository into your ROS2 workspace:  
    - git clone https://github.com/247340/calypso_ros_driver.git
